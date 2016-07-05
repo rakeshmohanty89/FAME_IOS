@@ -1,0 +1,20 @@
+[Profile]
+ID=WS
+Version=9
+[Telnet3270]
+HostName=159.206.32.249
+Security=N
+CertSelection=AUTOSELECT
+[Communication]
+Link=telnet3270
+[3270]
+QueryReplyMode=Auto
+HostCodePage=037-U
+[Keyboard]
+CuaKeyboard=1
+Language=United-States
+DefaultKeyboard=$$BLANK$$
+[LastExitView]
+A=4 50 50 1056 559 7 13 29 400 0 IBM3270— 37
+[ENTRYASSIST]
+Docmode=Y

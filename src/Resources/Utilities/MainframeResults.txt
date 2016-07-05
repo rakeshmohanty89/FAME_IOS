@@ -1,0 +1,10 @@
+INFO,Performe [vm] Command,Performed [vm] Command,false
+INFO,Performe [winter98] Command,Performed [winter98] Command,false
+INFO,Performe [act 10] Command,Performed [act 10] Command,false
+INFO,Performe [[clear]] Command,Performed [[clear]] Command,false
+INFO,Performe [UR] Command,Performed [UR] Command,false
+INFO,Performe [UR] Command,Performed [UR] Command,false
+INFO,Performe [i] Command,Performed [i] Command,false
+INFO,Performe [UR] Command,Performed [UR] Command,false
+INFO,Performe [ssa/pd] Command,Performed [ssa/pd] Command,false
+INFO,Performe [*NJD5AI] Command,Performed [*NJD5AI] Command,false
