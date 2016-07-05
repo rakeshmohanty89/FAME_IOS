@@ -50,11 +50,11 @@ public class Lib_Report {
 	public void SetReportPaths(String Path){
 		DetailsFolderPath=Path;
 		FinalReportFilePath=DetailsFolderPath.replace("Details", "FinalReport.html");
-		SummaryReportFilePath=DetailsFolderPath+"\\SummaryReport.html";
-		DevicesSummaryReportFilePath=DetailsFolderPath+"\\DevicesSummaryReport.html";
-		HomeFilePath=DetailsFolderPath+"\\Home.html";
-		SuiteDetailsFilePath=DetailsFolderPath+"\\SuiteDetailsReport_DeviceName.html";
-		CarrosalFilePath=DetailsFolderPath+"\\Carrosal_DeviceName.html";
+		SummaryReportFilePath=DetailsFolderPath+"/SummaryReport.html";
+		DevicesSummaryReportFilePath=DetailsFolderPath+"/DevicesSummaryReport.html";
+		HomeFilePath=DetailsFolderPath+"/Home.html";
+		SuiteDetailsFilePath=DetailsFolderPath+"/SuiteDetailsReport_DeviceName.html";
+		CarrosalFilePath=DetailsFolderPath+"/Carrosal_DeviceName.html";
 	}
 	
 	public void CreateCarousel(String DeviceName,String Images[]) throws IOException{
@@ -199,6 +199,8 @@ public class Lib_Report {
 		File HomeReportFile = new File(HomeFilePath);
 		
 		DeleteAndCreateFile(HomeReportFile);
+		System.out.println(oGbl.gUtilitiesPath);
+		System.out.println(oGbl.gReportDetailsFolderPath);
 		Files.copy(new File(oGbl.gUtilitiesPath+"/ClientLogo.jpg"),new File(oGbl.gReportDetailsFolderPath+"/ClientLogo.jpg"));
 				
 		FileWriter fwFinalRep = new FileWriter(HomeReportFile,true);
