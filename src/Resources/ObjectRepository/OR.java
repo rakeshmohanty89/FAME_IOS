@@ -9,7 +9,7 @@ import Libraries.Lib_Common;
 
 public class OR extends OR_Helper{
 
-	public Hashtable<String, String> HTCurrent=GetValue(new Lib_Common().GetCommonTD(System.getProperty("user.dir")+"\\Organizer.xls").get("Local"));
+	public Hashtable<String, String> HTCurrent=GetValue(new Lib_Common().GetCommonTD(System.getProperty("user.dir")+"/Organizer.xls").get("Local"));
 
 	private String GetLocalText(String string) {return HTCurrent.get(string);}
 
@@ -232,7 +232,7 @@ public class OR extends OR_Helper{
 	public String[] DF_Text_date = OC("Date","xpath=//*[contains(@text,'????') and @onScreen='true']");
 
 	public String[] DF_Text_DateSelected = OC("Date Selected","xpath=//*[contains(@text,'????') and @textColor='0xFFFFFF' and @onScreen='true']", "xpath=//*[contains(@text,'????') and @onScreen='true' and @textColor='0xFFFFFF']");
-	public String[] DF_Text_Depaturetime = OC("Departure time of the flight","xpath=//*[@id='"+ID_fare_time+"']", "xpath=//*[contains(@text,':') and contains(@text,'–')]");
+	public String[] DF_Text_Depaturetime = OC("Departure time of the flight","xpath=//*[@id='"+ID_fare_time+"']", "xpath=//*[contains(@text,':') and contains(@text,'Â–')]");
 	public String[] DF_Text_fareprice = OC("Fare price of the flight","xpath=//*[@id='"+ID_fare_price+"']","0", "xpath=//*[starts-with(@text,'$') and @onScreen='true' and @top='true']","0");
 	public String[] DF_Text_connectiontime = OC("duration of the flight travel","xpath=//*[@id='"+ID_connection_time+"']", "xpath=//*[contains(@text,'h ') and contains(@text,'m')]");
 	public String[] DF_Text_SegmentCode =OC("Segmentcode","xpath=//*[@id='"+ID_segment_code+"']");
@@ -336,7 +336,7 @@ public class OR extends OR_Helper{
 	public String[] RTF_BTN_Yes = OC("Yes Button","xpath=//*[@text='"+GetLocalText(TEXT_yes)+"']","xpath=//*[@text='Yes']");
 	public String[] RTF_BTN_Cancel = OC("Page Header","xpath=//*[@text='"+GetLocalText(TEXT_profile_not_activated_cancel)+"']");
 	//Remove Booking ref
-	public String[] RBR_Title_Header = OC("Page Header","xpath=//*[@text='"+GetLocalText(TEXT_removing_this_trip_doesnt_cancel)+"']","xpath=//*[@text='Removing this trip from your list doesn’t cancel your trip']");
+	public String[] RBR_Title_Header = OC("Page Header","xpath=//*[@text='"+GetLocalText(TEXT_removing_this_trip_doesnt_cancel)+"']","xpath=//*[@text='Removing this trip from your list doesnÂ’t cancel your trip']");
 	public String[] RBR_BTN_Remove = OC("Yes Button","xpath=//*[@id='"+ID_button_call+"']","xpath=//*[@text='Yes']");
 	public String[] RBR_BTN_Close = OC("Page Header","xpath=//*[@id='"+ID_button_close+"']","xpath=//*[@text='Cancel']");
 	public String[] RBR_BTN_RemoveTrip = OC("Yes Button","xpath=//*[@id='"+ID_button_call+"']","xpath=//*[@text='Remove trip']");
@@ -854,15 +854,15 @@ public class OR extends OR_Helper{
 	public String[] Preference_BTN_AutomaticUpdateOffSelected = OC("Automatic Update on value","xpath=//*[@id='"+ID_button_off+"' and @textColor='0xFFFFFF' and @onScreen='true']","xpath=//*[@text='Off' and @textColor='0x4B4E54']");
 	public String[] Preference_Text_Units = OC("Preference_Text_Units Screen","xpath=//*[@text='"+GetLocalText(TEXT_units)+"' and @onScreen='true']","xpath=//*[@accessibilityLabel='Units']");
 	public String[] Preference_Text_Temp = OC("Preference_Text_Temp Screen","xpath=//*[@text='"+GetLocalText(TEXT_temperature)+"' and @onScreen='true']","xpath=//*[@accessibilityLabel='Temperature']");
-	public String[] Preference_Text_Celcius = OC("Preference_Text_Celcius Screen","xpath=//*[@id='"+ID_button_celcius+"' and @onScreen='true']","xpath=//*[@text='Celsius (°C)']");
-	public String[] Preference_Text_Fahren = OC("Preference_Text_Fahren Screen","xpath=//*[@id='"+ID_button_fahrenheit+"' and @onScreen='true']","xpath=//*[@text='Fahrenheit (°F)']");
+	public String[] Preference_Text_Celcius = OC("Preference_Text_Celcius Screen","xpath=//*[@id='"+ID_button_celcius+"' and @onScreen='true']","xpath=//*[@text='Celsius (Â°C)']");
+	public String[] Preference_Text_Fahren = OC("Preference_Text_Fahren Screen","xpath=//*[@id='"+ID_button_fahrenheit+"' and @onScreen='true']","xpath=//*[@text='Fahrenheit (Â°F)']");
 	public String[] Preference_Text_Distance = OC("Preference_Text_Distance Screen","xpath=//*[@text='"+GetLocalText(TEXT_distance)+"' and @onScreen='true']","xpath=//*[@text='Distance']");
 	public String[] Preference_Text_Km = OC("Preference_Text_Km Screen","xpath=//*[@id='"+ID_button_kilometers+"' and @onScreen='true']","xpath=//*[@text='Kilometre (km)']");
 	public String[] Preference_Text_Miles = OC("Preference_Text_Miles Screen","xpath=//*[@id='"+ID_button_miles+"' and @onScreen='true']","xpath=//*[@text='Mile (mi)']");
 	public String[] Preference_Text_Weight = OC("Preference_Text_Weight Screen","xpath=//*[@text='"+GetLocalText(TEXT_weight)+"' and @onScreen='true']","xpath=//*[@text='Weight']");
 	public String[] Preference_Text_Kg = OC("Preference_Text_Kg Screen","xpath=//*[@id='"+ID_button_kilogram+"' and @onScreen='true']","xpath=//*[@text='Kilogram (kg)']");
 	public String[] Preference_Text_Pound = OC("Preference_Text_Pound Screen","xpath=//*[@id='"+ID_button_pound+"' and @onScreen='true']","xpath=//*[@text='Pound (lb)']");
-	public String[] Preference_Text_FahrenSelected = OC("Preference_Text_FahrenSelected Screen","xpath=//*[@id='"+ID_button_fahrenheit+"' and @textColor='0xFFFFFF' and @onScreen='true']","xpath=//*[@text='Fahrenheit (°F)' and @textColor='0x4B4E54']");
+	public String[] Preference_Text_FahrenSelected = OC("Preference_Text_FahrenSelected Screen","xpath=//*[@id='"+ID_button_fahrenheit+"' and @textColor='0xFFFFFF' and @onScreen='true']","xpath=//*[@text='Fahrenheit (Â°F)' and @textColor='0x4B4E54']");
 	public String[] Preference_Text_MilesSeletced = OC("Preference_Text_MilesSeletced Screen","xpath=//*[@id='"+ID_button_miles+"' and @textColor='0xFFFFFF' and @onScreen='true']","xpath=//*[@text='Mile (mi)' and @textColor='0x4B4E54']");
 	public String[] Preference_Text_PoundSelected = OC("Preference_Text_PoundSelected Screen","xpath=//*[@id='"+ID_button_pound+"' and @textColor='0xFFFFFF' and @onScreen='true']","xpath=//*[@text='Pound (lb)' and @textColor='0x4B4E54']");
 	//Saved_Passenger_SP
@@ -1162,8 +1162,8 @@ public class OR extends OR_Helper{
 	public String[] LP_Text_Cancel = OC("Cancel button on Location","xpath=//*[@text='Cancel']");
 	
 	
-	public String[] LP_Text_AllowNotification = OC("Allow Notification popup ","xpath=//*[@text='“Air Canada” Would Like to Send You Notifications']");
-	public String[] LP_Text_AllowLocation = OC("Allow location popup ","xpath=//*[@text='Allow “Air Canada” to access your location while you use the app?']");
+	public String[] LP_Text_AllowNotification = OC("Allow Notification popup ","xpath=//*[@text='Â“Air CanadaÂ” Would Like to Send You Notifications']");
+	public String[] LP_Text_AllowLocation = OC("Allow location popup ","xpath=//*[@text='Allow Â“Air CanadaÂ” to access your location while you use the app?']");
 	
 	
 
