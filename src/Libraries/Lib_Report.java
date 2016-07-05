@@ -199,7 +199,7 @@ public class Lib_Report {
 		File HomeReportFile = new File(HomeFilePath);
 		
 		DeleteAndCreateFile(HomeReportFile);
-		Files.copy(new File(oGbl.gUtilitiesPath+"\\ClientLogo.jpg"),new File(oGbl.gReportDetailsFolderPath+"\\ClientLogo.jpg"));
+		Files.copy(new File(oGbl.gUtilitiesPath+"/ClientLogo.jpg"),new File(oGbl.gReportDetailsFolderPath+"/ClientLogo.jpg"));
 				
 		FileWriter fwFinalRep = new FileWriter(HomeReportFile,true);
 		BufferedWriter out =new BufferedWriter(fwFinalRep);
